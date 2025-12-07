@@ -11,7 +11,8 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/common/system/perf/proprietary/system_ext/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/perfservice.rc \
     vendor/qcom/common/system/perf/proprietary/system_ext/etc/init/qspmsvc.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/qspmsvc.rc \
     vendor/qcom/common/system/perf/proprietary/system_ext/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite \
-    vendor/qcom/common/system/perf/proprietary/system_ext/etc/seccomp_policy/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy
+    vendor/qcom/common/system/perf/proprietary/system_ext/etc/seccomp_policy/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy \
+    vendor/qcom/common/system/perf/proprietary/system_ext/etc/permissions/privapp-permissions-com.qualcomm.qti.performancemode.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.qti.performancemode.xml
 
 PRODUCT_PACKAGES += \
     vendor.qti.MemHal-V1-ndk \
@@ -44,6 +45,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspmhal@1.0 \
     PowerSaveMode \
     workloadclassifier \
+    PerformanceMode \
     QPerformance \
     QXPerformance \
     UxPerformance \

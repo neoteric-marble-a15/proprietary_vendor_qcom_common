@@ -1491,38 +1491,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal-impl",
-    owner: "qcom",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.qspmhal-impl.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "vendor.qti.qspmhal-V1-ndk_vendor",
-                "libqspm-mem-utils-vendor",
-                "liblog",
-                "libcutils",
-                "libbinder",
-                "libbase",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
 prebuilt_etc_xml {
     name: "vendor.qti.hardware.perf2.xml",
     owner: "qcom",
@@ -1545,15 +1513,6 @@ prebuilt_etc_xml {
     name: "vendor.qti.hardware.servicetrackeraidl-service.xml",
     owner: "qcom",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.qti.qspmhal-service.xml",
-    owner: "qcom",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -1711,37 +1670,6 @@ cc_prebuilt_binary {
                 "vendor.qti.hardware.perf2-V1-ndk_vendor",
                 "libbinder_ndk",
                 "vendor.qti.hardware.power.powermodule-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.qspmhal-service",
-    owner: "qcom",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/vendor.qti.qspmhal-service",
-            ],
-            shared_libs: [
-                "vendor.qti.qspmhal-V1-ndk_vendor",
-                "vendor.qti.qspmhal-impl",
-                "liblog",
-                "libutils",
-                "libavservices_minijail",
-                "libbase",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
